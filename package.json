@@ -10,7 +10,18 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "test": "ava"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
@@ -18,10 +29,12 @@
     "storyblok-nuxt": "0.0.3"
   },
   "devDependencies": {
-    "cross-env": "^5.0.1",
+    "ava": "^0.25.0",
     "babel-eslint": "^8.2.1",
+    "cross-env": "^5.0.1",
     "eslint": "^4.15.0",
     "eslint-loader": "^2.0.0",
-    "eslint-plugin-vue": "^4.0.0"
+    "eslint-plugin-vue": "^4.0.0",
+    "jsdom": "^11.11.0"
   }
 }
