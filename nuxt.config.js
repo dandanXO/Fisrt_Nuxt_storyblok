@@ -14,7 +14,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel:'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato:400,700'}
     ]
   },
 
@@ -40,7 +41,7 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    ['storyblok-nuxt',{accessToken:'blzj0zmA59foZ4SYVCMwsAtt', cacheProvider: 'memory'}]
   ],
   /*
   ** Axios module configuration
