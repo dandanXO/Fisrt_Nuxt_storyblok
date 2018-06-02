@@ -13,7 +13,7 @@
 export default {
     asyncData(context){
         return context.app.$storyapi.get('cdn/stories/blog/'+context.params.postId, {
-            version:'draft'
+            version: process.env.NODE_EVN == 'draft'?'published':'draft'
         }).then(res => {
             return{
                 blok: res.data.story.content,

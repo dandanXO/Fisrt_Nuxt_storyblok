@@ -1,8 +1,14 @@
 # First_Nuxt
 
-> for the first do nuxt
+> for the first do nuxt.
 
-## Build Setup
+like a blog use stroyblok do CMS and CircleCI do auto unit test.
+last deploy  on aws's s3 server
+
+# prview
+[here](http://first-nuxt-example.s3-website-ap-southeast-1.amazonaws.com)
+
+# Build Setup
 
 ``` bash
 # install dependencies
