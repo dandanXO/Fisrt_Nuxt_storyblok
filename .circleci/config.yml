@@ -1,7 +1,7 @@
-dependencies:
-  override:
-    - yarn add ava tap-xunit --dev # or you could use npm
+machine:
+  node:
+    version: 0.10
+
 test:
   override:
-    - mkdir -p $CIRCLE_TEST_REPORTS/reports
-    - ava --tap | tap-xunit > $CIRCLE_TEST_REPORTS/reports/ava.xml
+    - ./node_modules/.bin/ava
